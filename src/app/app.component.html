@@ -1,0 +1,26 @@
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
+<!-- * * * * * * * to get started with your project! * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+<link href="../app/app.component.css">
+
+<span>안녕하세요! <br>
+<h1><strong>{{ title }}</strong> &nbsp;<b>{{name}}</b> 님</h1>
+<nav>
+    <a routerLink="/dashboard">Dashboard</a>
+    <a routerLink="/heroes">Heroes</a>
+</nav>
+
+<!--<app-heroes></app-heroes>  HeroesComponent 뷰 표시하기. -->
+<router-outlet></router-outlet> <!--RouterOutlet 추가 -->
+<app-messages></app-messages><!--messageComponent 뷰 표시하기.-->
+
+
+
+  
+

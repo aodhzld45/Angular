@@ -1,0 +1,36 @@
+<!-- <h2>{{heroes.name | uppercase}} Details</h2> uppercase는 Angular의 기몬 파이프인 UppercasePipe -->
+
+<!-- 양방향 바인딩 -->
+<!-- <div>
+    <label for="name">Hero name: </label>
+    <input id="name" [(ngModel)]="hero.name" placeholder="name">
+
+</div> -->
+
+<h2>My Heros</h2>
+<ul class="heroes">
+    <li *ngFor="let hero of heroes">
+        <a routerLink="/detail/{{hero.id}}">
+            <!--이벤트 바인딩 문법-->
+            <span class="badge">{{hero.id}}</span>{{hero.name}}
+        </a>
+    
+        <button type="button" class="delete" title="delete hero"
+        (click)="delete(hero)">x</button>
+
+    </li>
+</ul>
+
+<div>
+    <label for="new-hero">Hero name: </label>
+    <input id="new-hero" #heroName />
+  
+    <!-- (click) 이벤트를 감지하면 현재값을 인자로 전달하면서 add() 함수를 실행하고, 입력 필드를 비움 -->
+    <button type="button" class="add-button" (click)="add(heroName.value); heroName.value=''">
+      추가하기
+    </button>
+  </div>
+
+
+<!-- <app-hero-detail [hero]="selectedHero"></app-hero-detail> -->
+

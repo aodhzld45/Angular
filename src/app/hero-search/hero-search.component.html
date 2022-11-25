@@ -1,0 +1,18 @@
+<div id="search-component">
+    <label for="search-box">Hero Search</label>
+    <!-- 인풋 엘리먼트와 이벤트 바인딩된 search() 동작 -->
+    <!-- 1. 사용자가 텍스트박스에 키보드를 입력할 때마다
+         2. 입력된 내용이 인자로 전달되면서 search()메소드가 실행
+         3. 이 메소드에서 searchTerms 프로퍼티는 observalble로 동작
+         4. 사용자가 입력한 내용을 옵저버블 스트림으로 보냄 -->
+    <input #searchBox id="search-box" (input)="search(searchBox.value)" />
+  
+    <ul class="search-result">
+    <!-- async 파이프 : Observable응 자동으로 구독하는 역할  -->
+      <li *ngFor="let hero of heroes$ | async" >
+        <a routerLink="/detail/{{hero.id}}">
+          {{hero.name}}
+        </a>
+      </li>
+    </ul>
+  </div>
