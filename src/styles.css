@@ -1,3 +1,6 @@
+/* form 디자인 CSS */
+@import url('https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css');
+
 /* 애플리케이션 전역에 적용되는 스타일 */
 h1 {
     color: #369;

@@ -1,5 +1,10 @@
+export class Hero {
+    constructor(
 
-export interface Hero {
-    id : number;
-    name : string;
+    public id : number,
+    public name : string,
+    public power : string,
+    public alterEgo? : string
+
+    ) { }
 }
